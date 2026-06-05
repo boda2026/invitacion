@@ -33,7 +33,7 @@
   }
 
   .env-letter.letter-rise {
-    transform: translateX(-50%) translateY(-70px);
+    transform: translateX(-50%) translateY(-50px);
   }
 
   .env-letter-inner {
@@ -90,7 +90,7 @@
   }
 
   .env-letter.letter-rise {
-    transform: translateX(-50%) translateY(-60vw);
+    transform: translateX(-50%) translateY(-55vw);
   }
 
   .hero-names { font-size: clamp(2.2rem, 15vw, 3.2rem); }
@@ -121,7 +121,7 @@
   #hero { height: 100svh; min-height: 340px; }
 
   .env-letter.letter-rise {
-    transform: translateX(-50%) translateY(-200px);
+    transform: translateX(-50%) translateY(-170px);
   }
 
   .envelope-scene {

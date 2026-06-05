@@ -1,5 +1,7 @@
 import CONFIG from './config.js';
 
+let musicPlayer = null;
+
 export function initMusic() {
   const btn   = document.getElementById('music-btn');
   const audio = document.getElementById('music-audio');
@@ -53,10 +55,21 @@ export function initMusic() {
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && playing) pause();
   });
+
+  // Exportar función play para uso externo
+  musicPlayer = { play, pause };
+  
   // Reproducir automáticamente cuando se ingresa la contraseña correcta
   document.addEventListener('wedding:auth', () => {
     setTimeout(() => {
       play();
-    }, 500); // Pequeño delay para que se complete la transición
+    }, 800);
   });
+}
+
+// Función helper para reproducir desde otros módulos
+export function playMusic() {
+  if (musicPlayer) {
+    musicPlayer.play();
+  }
 }

@@ -1,4 +1,5 @@
 import CONFIG from './config.js';
+import { playMusic } from './music.js';
 
 export function initEnvelope() {
   const screen = document.getElementById('envelope-screen');
@@ -176,5 +177,10 @@ function revealInvitation(screen) {
       main.classList.add('content-fadein');
     });
     document.dispatchEvent(new CustomEvent('wedding:auth'));
+    
+    // Reproducir música directamente
+    setTimeout(() => {
+      playMusic();
+    }, 1000);
   }, { once: true });
 }
