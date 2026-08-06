@@ -11,7 +11,7 @@ const CONFIG = {
 
   event: {
     timeline: [
-      { time: '18:15', label: 'Ingreso' },
+      { time: '18:30', label: 'Ingreso' },
       { time: '18:45', label: 'Ceremonia' },
       { time: '19:30', label: 'Fiesta' },
     ],
